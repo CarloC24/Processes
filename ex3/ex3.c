@@ -10,6 +10,17 @@
 int main(void)
 {
     // Your code here
+    int counter = fork();
+    if (counter == 0)
+    {
+        printf("This is the child process \n");
+        exit(1);
+    }
+    else
+    {
+        wait(NULL);
+        printf("This is the parent process \n");
+    }
 
     return 0;
 }

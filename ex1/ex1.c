@@ -9,6 +9,17 @@
 int main(void)
 {
     // Your code here
+    int x = 0;
+    int counter = fork();
+    if (counter == 0)
+    {
+        printf("%d x from the child process", x);
+    }
+    else
+    {
+        x = 100;
+        printf("%d x from the parent process", x);
+    }
 
     return 0;
 }
